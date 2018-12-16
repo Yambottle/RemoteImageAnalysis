@@ -1,0 +1,124 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#include<stdio.h>
+#include<stdlib.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+    FILE *fp;
+    //Çó²î---------------------------------
+    short int t;
+    int cha[3];
+    int min[3];
+    int count=0;
+    int sum;
+
+    fp=fopen("D:\\Documents\\Downloads\\hanyx\\exsample400-400","rb");
+    while(count<3){
+        sum=307254;
+        fread(&t,sizeof(t),1,fp);
+        short int max=t,mi=t;
+    while(sum-=2){
+        fread(&t,sizeof(t),1,fp);
+        cha[count]=max-mi;
+        if(t>max)
+                {cha[count]=t-mi;max=t;}
+        if(t<mi)
+                {cha[count]=max-t;mi=t;min[count]=t;}
+    }
+    count++;
+    }
+    fclose(fp);
+    /*while(count--)
+    Memo1->Lines->Add(IntToStr(cha[count]));*///¼ì²â²î
+    //---------------------------------------------------
+    //·ÅÍ¼-----------------------------------------------
+    FILE *R,*B,*G;
+    R=fopen("D:\\Documents\\Downloads\\hanyx\\exsample400-400","rb");
+    G=fopen("D:\\Documents\\Downloads\\hanyx\\exsample400-400","rb");
+    fseek(G,307256,1);
+    B=fopen("D:\\Documents\\Downloads\\hanyx\\exsample400-400","rb");
+    fseek(B,307256*2,1);
+    int i,j;
+    short int r,g,b;
+    Image1->Canvas->Pen->Style=psSolid;
+    Image1->Canvas->MoveTo(1,1);
+    for(i=1;i<=386;i++,Image1->Canvas->MoveTo(1,i)){
+    for(j=1;j<=398;j++){
+    fread(&r,sizeof(r),1,R);
+    fread(&g,sizeof(g),1,G);
+    fread(&b,sizeof(b),1,B);
+    Image1->Canvas->Pen->Color=TColor(RGB(
+    ((r-min[0])*1.0/cha[0]*255),
+    ((g-min[1])*1.0/cha[1]*255),
+    ((b-min[2])*1.0/cha[2]*255)));
+
+    Image1->Canvas->LineTo(j,i);
+    }
+    }
+    //---------------------------------------------------
+
+
+
+
+
+
+
+
+    /*short int r;
+    fp=fopen("D:\\Documents\\Downloads\\hanyx\\exsample400-400","rb");
+    //
+    fread(&r,sizeof(r),1,fp);
+    //Memo1->Lines->Add(IntToStr(r));
+    short int rmax=r;
+    int c=0;
+    while(c<=153628)
+    {
+     fread(&r,sizeof(r),1,fp);
+     if(rmax<r)
+        {rmax=r;
+         c++;}
+     else
+         c++;
+    }
+    Memo1->Lines->Add(IntToStr(rmax));
+
+    short int rmin=r;
+    int c=0;
+    while(c<=153628)
+    {
+     fread(&r,sizeof(r),1,fp);
+     if(rmin>r)
+        {rmin=r;
+         c++;}
+     else
+         c++;
+    }
+    Memo1->Lines->Add(IntToStr(rmin)); */
+    //
+
+
+
+    /*fseek(fp,307254,1);
+    fread(&b,sizeof(b),1,fp);
+    Memo1->Lines->Add(IntToStr(b));
+
+    fseek(fp,307254,1);
+    fread(&g,sizeof(g),1,fp);
+    Memo1->Lines->Add(IntToStr(g));*/
+}
+//---------------------------------------------------------------------------

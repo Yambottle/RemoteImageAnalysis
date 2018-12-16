@@ -1,0 +1,26 @@
+ENVI
+description = {
+  Classification Image created from input ROIs [Thu Mar 24 13:37:52 2016]}
+samples = 1057
+lines   = 739
+bands   = 1
+header offset = 0
+file type = ENVI Classification
+data type = 1
+interleave = bsq
+sensor type = Unknown
+classes = 5
+class lookup = {
+   0,   0,   0, 255,   0,   0,   0, 255,   0,   0,   0, 255, 255, 255,   0}
+class names = {
+ Unclassified, Region #1 [Red] 182444 points, 
+ Region #2 [Green] 403581 points, Region #3 [Blue] 177840 points, 
+ Region #4 [Yellow] 50284 points}
+byte order = 0
+x start = 3675
+y start = 2371
+map info = {GEOTIFF (Transverse Mercator), 1.0000, 1.0000, 555695.0000, 4345305.0000, 3.0000000000e+001, 3.0000000000e+001, WGS-84, units=Meters}
+projection info = {3, 6378137.0, 6356752.3, 0.000000, 117.000000, 500000.0, 0.0, 1.000000, WGS-84, GEOTIFF (Transverse Mercator), units=Meters}
+wavelength units = Unknown
+band names = {
+ Class Image from ROIs}

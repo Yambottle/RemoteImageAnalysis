@@ -1,0 +1,21 @@
+ENVI
+description = {
+  File Resize Result, x resize factor: 1.000000, y resize factor: 1.000000.
+  [Thu Sep 18 15:03:40 2014]}
+samples = 398
+lines   = 386
+bands   = 3
+header offset = 0
+file type = ENVI Standard
+data type = 12
+interleave = bsq
+sensor type = Unknown
+byte order = 0
+x start = 5197
+y start = 4599
+map info = {Geographic Lat/Lon, 1.0000, 1.0000, 122.52603040, 37.24344143, 3.5131000000e-004, 2.7019000000e-004, WGS-84, units=Degrees}
+wavelength units = Unknown
+band names = {
+ ROI Resize (Layer (Band 1:LC81190342013120LGN01_B2.TIF):example), 
+ ROI Resize (Layer (Band 1:LC81190342013120LGN01_B3.TIF):example), 
+ ROI Resize (Layer (Band 1:LC81190342013120LGN01_B4.TIF):example)}

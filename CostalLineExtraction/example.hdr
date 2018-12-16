@@ -1,0 +1,18 @@
+ENVI
+description = {
+  Create Layer File Result [Thu Sep 18 15:02:12 2014]}
+samples = 7499
+lines   = 7565
+bands   = 3
+header offset = 0
+file type = ENVI Standard
+data type = 12
+interleave = bsq
+sensor type = Unknown
+byte order = 0
+map info = {Geographic Lat/Lon, 1.0000, 1.0000, 120.70062364, 38.48577505, 3.5131000000e-004, 2.7019000000e-004, WGS-84, units=Degrees}
+wavelength units = Unknown
+band names = {
+ Layer (Band 1:LC81190342013120LGN01_B2.TIF), 
+ Layer (Band 1:LC81190342013120LGN01_B3.TIF), 
+ Layer (Band 1:LC81190342013120LGN01_B4.TIF)}
